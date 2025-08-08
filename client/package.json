@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
-    "build": "cd client && npm install --production=false && npm run build && cd ../server && npm install",
-    "install-all": "npm install && cd client && npm install --production=false && cd ../server && npm install"
+     "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+    
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
