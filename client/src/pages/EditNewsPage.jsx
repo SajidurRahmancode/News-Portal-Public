@@ -84,7 +84,7 @@ const EditNewsPage = () => {
       await axios.put(`https://news-portal-public.onrender.com/api/news/${id}`, formDataToSend, {
         headers: {
           'x-auth-token': token,
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data'}
       });
 
       navigate('/dashboard');
