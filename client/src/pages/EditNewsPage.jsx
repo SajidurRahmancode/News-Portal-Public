@@ -26,7 +26,7 @@ const EditNewsPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/news/${id}`);
+        const res = await axios.get(`https://news-portal-public.onrender.com/api/news/${id}`);
         const { title, content, category, isPublished, image } = res.data;
         
         setFormData({
@@ -35,7 +35,7 @@ const EditNewsPage = () => {
           category,
           isPublished,
           image,
-          previewImage: image ? `http://localhost:5000${image}` : ''
+          previewImage: image ? `https://news-portal-public.onrender.com${image}` : ''
         });
       } catch (err) {
         setError(err.response?.data?.message || 'Failed to fetch news');
@@ -80,11 +80,11 @@ const EditNewsPage = () => {
         formDataToSend.append('image', formData.image);
       }
 
-      await axios.put(`http://localhost:5000/api/news/${id}`, formDataToSend, {
+
+      await axios.put(`https://news-portal-public.onrender.com/api/news/${id}`, formDataToSend, {
         headers: {
           'x-auth-token': token,
           'Content-Type': 'multipart/form-data'
-        }
       });
 
       navigate('/dashboard');

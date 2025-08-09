@@ -23,11 +23,11 @@ const HomePage = () => {
           entertainmentRes, 
           healthRes
         ] = await Promise.all([
-          axios.get('http://localhost:5000/api/news/top?limit=6'),
-          axios.get('http://localhost:5000/api/news?category=technology&limit=4'),
-          axios.get('http://localhost:5000/api/news?category=sports&limit=4'),
-          axios.get('http://localhost:5000/api/news?category=entertainment&limit=4'),
-          axios.get('http://localhost:5000/api/news?category=health&limit=4')
+          axios.get('https://news-portal-public.onrender.com/api/news/top?limit=6'),
+          axios.get('https://news-portal-public.onrender.com/api/news?category=technology&limit=4'),
+          axios.get('https://news-portal-public.onrender.com/api/news?category=sports&limit=4'),
+          axios.get('https://news-portal-public.onrender.com/api/news?category=entertainment&limit=4'),
+          axios.get('https://news-portal-public.onrender.com/api/news?category=health&limit=4')
         ]);
         
         setTopNews(topRes.data);

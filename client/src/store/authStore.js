@@ -2,7 +2,7 @@
 import { create } from 'zustand';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://news-portal-public.onrender.com/api';
 
 const authStore = create((set) => ({
   user: null,

@@ -6,7 +6,7 @@ const NewsCard = ({ news }) => {
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
       {news.image && (
         <img 
-          src={`http://localhost:5000${news.image}`} 
+          src={`https://news-portal-public.onrender.com${news.image}`} 
           alt={news.title}
           className="w-full h-48 object-cover"
         />

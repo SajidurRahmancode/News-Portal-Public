@@ -21,7 +21,7 @@ const NewsPage = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        let url = `http://localhost:5000/api/news?page=${pagination.page}&limit=${pagination.limit}&isPublished=true`;
+        let url = `https://news-portal-public.onrender.com/api/news?page=${pagination.page}&limit=${pagination.limit}&isPublished=true`;
         if (category) {
           url += `&category=${category}`;
         }

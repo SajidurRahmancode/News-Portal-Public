@@ -15,7 +15,7 @@ const NewsDetailPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/news/${id}`);
+        const res = await axios.get(`https://news-portal-public.onrender.com/api/news/${id}`);
         if (!res.data.isPublished && (!user || res.data.author._id !== user.id)) {
           throw new Error('This news is not published');
         }
@@ -79,7 +79,7 @@ const NewsDetailPage = () => {
       
       {news.image && (
         <img 
-          src={`http://localhost:5000${news.image}`} 
+          src={`https://news-portal-public.onrender.com${news.image}`} 
           alt={news.title} 
           className="w-full h-96 object-cover rounded-lg mb-6"
         />

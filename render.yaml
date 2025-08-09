@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: client
+    env: static
+    routes:
+      - source: /
+        destination: /
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./client/dist
+
+  - type: web
+    name: server
+    env: node
+    routes:
+      - source: /api
+        destination: /
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: MONGODB_URI # Replace with your actual MongoDB connection string
+      - key: JWT_SECRET
+        value: JWT_SECRET # Replace with your actual JWT secret
+      - key: FRONTEND_URL
+        value: https://news-portal-public.onrender.com # Replace with your frontend URL
+    disk:
+      name: uploads
+      mountPath: /uploads
+      sizeGb: 10

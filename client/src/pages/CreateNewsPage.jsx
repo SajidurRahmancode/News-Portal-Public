@@ -49,7 +49,7 @@ const CreateNewsPage = () => {
         formDataToSend.append('image', formData.image);
       }
 
-      const res = await axios.post('http://localhost:5000/api/news', formDataToSend, {
+      const res = await axios.post('https://news-portal-public.onrender.com/api/news', formDataToSend, {
         headers: {
           'x-auth-token': token,
           'Content-Type': 'multipart/form-data'

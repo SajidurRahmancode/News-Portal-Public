@@ -20,7 +20,7 @@ const UserDashboard = () => {
     const fetchUserNews = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/news/user', {
+        const res = await axios.get('https://news-portal-public.onrender.com/api/news/user', {
           headers: {
             'x-auth-token': token
           }
@@ -42,7 +42,7 @@ const UserDashboard = () => {
     
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/news/${id}`, {
+      await axios.delete(`https://news-portal-public.onrender.com/api/news/${id}`, {
         headers: {
           'x-auth-token': token
         }

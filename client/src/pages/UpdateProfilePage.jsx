@@ -41,7 +41,7 @@ const UpdateProfilePage = () => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.put(
-        `http://localhost:5000/api/users/${user?._id}`,
+        `https://news-portal-public.onrender.com/api/users/${user?._id}`,
         formData,
         {
           headers: {
