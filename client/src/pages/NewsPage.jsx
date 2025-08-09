@@ -57,7 +57,7 @@ const NewsPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <SectionHeader 
-        title={category ? `${category.charAt(0).toUpperCase() + category.slice(1)} News` : 'All News (latest 6)'} 
+        title={category ? `${category.charAt(0).toUpperCase() + category.slice(1)} News` : 'All News'} 
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

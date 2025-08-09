@@ -93,7 +93,7 @@ const HomePage = () => {
       <div className="container mx-auto px-4">
         {/* Top News Section */}
         <section className="mb-12">
-          <SectionHeader title="Top Stories" link="/news" />
+          <SectionHeader title="Top Stories(6)" link="/news" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {Array.isArray(topNews) && topNews.map(news => (
               <NewsCard key={news._id} news={news} />
